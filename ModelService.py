@@ -8,9 +8,25 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import load_model
+#from quiver_engine import server
 import pathlib
 class ModelService(object):
     """description of class"""
+    def Visual(model_file):
+        print("Load model")
+        model = load_model(model_file)
+        #server.launch(model)
+        tf.keras.utils.plot_model(
+            model,
+            to_file="model.png",
+            show_shapes=True,
+            show_layer_names=True,
+            expand_nested=False,
+            rankdir="TB",
+            dpi=96,
+        )
+        print(model.summary())
+
     def Predict(url, class_names, model_file):
         # define dataset parameters
         batch_size = 32
