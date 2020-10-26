@@ -15,6 +15,6 @@ img_url= "file:///Users/mac/Desktop/5c28ee5e8b5e46bb03ef08a8db5ef4_big_gallery.j
 class_names = ['glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
 
 
-#ModelService.GenerateModel(dataset_url,dataset_name, model_name)
+ModelService.GenerateModel(dataset_url,dataset_name, model_name)
 #ModelService.Predict(img_url,class_names,model_name)
-ModelService.Visual(model_name)
+#ModelService.Visual(model_name)
